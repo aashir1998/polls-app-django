@@ -2,6 +2,10 @@ from django.contrib import admin
 
 from .models import Choice, Question
 
+admin.site.site_header = "Polls Admin"
+admin.site.site_title = "Polls Admin Area"
+admin.site.index_title = "Welcome to the Polls Admin"
+
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
@@ -20,4 +24,3 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Question, QuestionAdmin)
-admin.site.register(Choice)
